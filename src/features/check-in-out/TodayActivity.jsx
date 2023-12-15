@@ -43,7 +43,6 @@ const NoActivity = styled.p`
 function TodayActivity() {
   const { isLoading, activites } = useTodayActivity();
   if (isLoading) return <Spinner />;
-  console.log(activites.length);
   return (
     <StyledToday>
       <Row type="horizontal">
