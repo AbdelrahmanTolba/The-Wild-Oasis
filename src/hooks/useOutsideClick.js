@@ -6,6 +6,7 @@ export function useOutsideClick(handler) {
   useEffect(
     function () {
       function handleClick(e) {
+        e.preventPropagation();
         if (ref.current && !ref.current.contains(e.target)) handler();
       }
       document.addEventListener("click", handleClick);
